@@ -1,0 +1,11 @@
+.background{
+    background-color:palevioletred;
+    height: 50px;
+    margin: 20px 20px;
+    border-radius: 5px;
+}
+.details h3{
+    color:black;
+    text-align: center;
+    padding: 20px;
+}
