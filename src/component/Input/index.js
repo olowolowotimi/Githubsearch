@@ -2,10 +2,10 @@ import React from "react";
 import inputStyle from "./style/Input.module.css";
 
 
-const Input = () => {
+const Input = ({onchange}) => {
     return(
         <div className={inputStyle.container}>
-            <input type="text" placeholder="Search Username"/>
+            <input type="text" placeholder="Search Username" onChange={onchange}/>
             </div>
     )
 }
