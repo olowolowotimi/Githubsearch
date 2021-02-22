@@ -1,0 +1,10 @@
+.container{
+    margin: 0 30px;
+}
+ .container button{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+} 
