@@ -36,10 +36,11 @@ return (
   {
     (data === null) ? null:
     <Display
+    name={data?.name}
     avatar_url={data?.avatar_url}
     bio={data?.bio}
     twitter_username={data?.twitter_username}
-    repos_url={data?.repos_url}
+    html_url={data?.html_url}
     company={data?.company}
     location={data?.location}
     /> 

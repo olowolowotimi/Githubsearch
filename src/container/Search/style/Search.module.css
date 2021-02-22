@@ -1,6 +1,6 @@
-/* .container{
-    margin: 0 30px;
-} */
+.container{
+    margin: 0 150px;
+}
  .container button{
     width: 200px;
     height: 40px;
@@ -8,3 +8,9 @@
     border: none;
     cursor: pointer;
 } 
+
+@media only screen and (max-width:768px) {
+    .container{
+        margin: 0 auto;
+    }
+}
