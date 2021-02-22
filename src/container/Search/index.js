@@ -29,18 +29,21 @@ const Search = () => {
          });
   }
 
+const Card = data?.map((user, i) => (
+  <Display
+  avatar_url={user.avatar_url}
+  bio={user.bio}
+   />
+));
 
-
-  return (
+  const userInput = () => (
     <div className={searchStyle.container}>
       <Input onchange={getInput} />
        <button onClick={submit}>Submit </button> 
-      <Display
-      avatar_url={user.avatar_url}
-      bio={user.bio}
-       />
     </div>
   );
+
+  return <userInput/>;
 };
 
 export default Search;
