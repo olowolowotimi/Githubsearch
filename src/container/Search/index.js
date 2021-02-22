@@ -4,8 +4,12 @@ import Input from "../../component/Input";
 import Display from "../../component/Display";
 
 const Search = () => {
-  const [data, setData] = React.useState([]);
+  const [data, setData] = React.useState(null);
   const [user, setUser] = React.useState("");
+
+  console.log(
+    "data", data
+  );
   const getInput = (e) => {
     setUser(e.target.value);
     console.log(user);
@@ -34,17 +38,17 @@ return (
   <Input onchange={getInput} />
   <button onClick={submit}>Submit</button>
   {
-    (data === null) ? null:
+    data && (
     <Display
-    name={data?.name}
-    avatar_url={data?.avatar_url}
-    bio={data?.bio}
-    twitter_username={data?.twitter_username}
-    html_url={data?.html_url}
-    company={data?.company}
-    location={data?.location}
+    name={data.name}
+    avatar_url={data.avatar_url}
+    bio={data.bio}
+    twitter_username={data.twitter_username}
+    html_url={data.html_url}
+    company={data.company}
+    location={data.location}
     /> 
-  
+    )
   }
 </div>
 );

@@ -2,11 +2,14 @@
     margin: 0 150px;
 }
  .container button{
-    width: 200px;
+    width: 150px;
     height: 40px;
     border-radius: 10px;
+    padding: 0 10px;
     border: none;
     cursor: pointer;
+    color:black;
+    background-color: palevioletred;
 } 
 
 @media only screen and (max-width:768px) {

@@ -20,13 +20,13 @@ const Display = ({
       return(
           <div className={playStyle.card}>
               <div className={playStyle.content}>
-                  <h4>Name: {name}</h4>
-              <img src={avatar_url} alt="user image"/>
-              <p>Bio:  {bio}</p>
-              <p><span><FaTwitterSquare/></span>  {twitter_username}</p>
-             <span><CgProfile/></span> <a href={html_url}>{html_url}</a>
-              <p><span><ImOffice/></span>  {company}</p>
-              <p><span><ImLocation/></span>  {location}</p>
+                  {name && <h4>Name:  {name}</h4>}
+              {avatar_url && <img src={avatar_url} alt="user image"/>}
+              {bio && <p>Bio:  {bio}</p>}
+              {twitter_username && <p><span><FaTwitterSquare/></span>  {twitter_username}</p>}
+             {html_url && <p><span><CgProfile/></span> <a href={html_url} target="_blank">{html_url}</a></p> }
+              {company &&<p><span><ImOffice/></span>  {company}</p>}
+              {location &&<p><span><ImLocation/></span>  {location}</p>}
           </div>
 </div>
       )
