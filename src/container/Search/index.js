@@ -29,21 +29,24 @@ const Search = () => {
          });
   }
 
-const Card = data?.map((user, i) => (
-  <Display
-  avatar_url={user.avatar_url}
-  bio={user.bio}
-   />
-));
-
-  const userInput = () => (
-    <div className={searchStyle.container}>
-      <Input onchange={getInput} />
-       <button onClick={submit}>Submit </button> 
-    </div>
-  );
-
-  return <userInput/>;
+return (
+<div className={searchStyle.container}>
+  <Input onchange={getInput} />
+  <button onClick={submit}>Submit</button>
+  {
+    (data === null) ? null:
+    <Display
+    avatar_url={data?.avatar_url}
+    bio={data?.bio}
+    twitter_username={data?.twitter_username}
+    repos_url={data?.repos_url}
+    company={data?.company}
+    location={data?.location}
+    /> 
+  
+  }
+</div>
+);
 };
 
 export default Search;

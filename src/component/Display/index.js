@@ -14,9 +14,15 @@ const Display = ({
   }) => {
       return(
           <div className={playStyle.card}>
-              <h4>{avatar_url}</h4>
-              <p>{bio}</p>
+              <div className={playStyle.content}>
+              <a href={avatar_url}>User image</a>
+              <p>Bio:{bio}</p>
+              <p>@{twitter_username}</p>
+              <a href={repos_url}>Repositories Link</a>
+              <p>{company}</p>
+              <p>{location}</p>
           </div>
+</div>
       )
   }
 
